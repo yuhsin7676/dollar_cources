@@ -11,7 +11,7 @@ $("#mainForm").submit(function(e) {
         data: form.serialize(), // serializes the form's elements. (см: https://ruseller.com/jquery.php?id=8)
         success: function(data)
         {
-            data = JSON.parse(data);
+            data = JSON.parse(data); // Должен вернуться массив 2-х массивов
             createChart(data[1],data[0]);
         }
     });
